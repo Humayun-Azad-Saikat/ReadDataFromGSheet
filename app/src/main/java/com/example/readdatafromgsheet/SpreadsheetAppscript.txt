@@ -1,0 +1,17 @@
+//for getting itms in app
+function doGet(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = sheet.getDataRange().getValues();
+
+  const jsonData = data.map(row => {
+    return {
+      name: row[0], // Adjust index based on your columns
+      address: row[1] // Adjust index based on your columns
+    };
+  });
+
+  return ContentService.createTextOutput(JSON.stringify(jsonData))
+                       .setMimeType(ContentService.MimeType.JSON);
+}
+
+this is appscript in spreadsheet for getting data
