@@ -65,13 +65,6 @@ class MainActivity : ComponentActivity() {
 }
 
 
-fun itemsList(name:String,address:String):List<SheetItems>{
-    return listOf(
-        SheetItems("name:$name","address:$address"),
-       // SheetItems("saikat","pabna")
-    )
-}
-
 fun getData(context: Context,callback:(List<SheetItems>)->Unit){
     val jsonurl = "https://script.google.com/macros/s/AKfycbxbeNWK1_xdMP_tORCpjj8_UGclqWKIVBbFx2JTq3z6Dy4GeHcn6fkc_nIThqRqaK53/exec"
     val requestQueue = Volley.newRequestQueue(context)
