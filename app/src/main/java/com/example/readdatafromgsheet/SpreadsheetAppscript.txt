@@ -1,4 +1,4 @@
-//for getting itms in app
+//for getting ietms in app
 function doGet(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const data = sheet.getDataRange().getValues();
